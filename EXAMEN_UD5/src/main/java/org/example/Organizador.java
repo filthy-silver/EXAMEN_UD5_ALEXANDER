@@ -117,6 +117,6 @@ public class Organizador {
     public void calcularDonacion(Corredor corredor) {
         System.out.println("El corredor " + corredor.getName() +
                 " ha conseguido una donación de " +
-                corredor.getImporte_vuelta() * corredor.getVueltas_completadas());
+                (corredor.getImporte_vuelta() * corredor.getVueltas_completadas()) * (corredor.getNumPatrocinadores() - 1));
     }
 }

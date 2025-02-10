@@ -1,11 +1,12 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Corredor {
     private String nombre;
     private int dorsal = 0;
-    private static int numCorredor = 0;
+    private static int numCorredor = 0; //la declaramos static para que no varíe según se crean corredores
     private ArrayList<String> listaPatrocinadores = new ArrayList<>();
     private double importe_vuelta = 0.5;
     private int vueltas_completadas;
@@ -16,9 +17,18 @@ public class Corredor {
         dorsal = numCorredor;
     }
 
+
     public void insertarPatrocinador(String patrocinador ) {
         listaPatrocinadores.add(patrocinador);
         System.out.println("* Nuevos patrocinadores añadidos para el corredor " + nombre);
+    }
+    public void insertarPatrocinador(String ... patrocinador ) {
+        listaPatrocinadores.addAll(List.of(patrocinador));
+        System.out.println("* Nuevos patrocinadores añadidos para el corredor " + nombre);
+    }
+
+    public int getNumPatrocinadores(){
+        return listaPatrocinadores.size();
     }
 
     public void setNumero_vueltas(int i) {

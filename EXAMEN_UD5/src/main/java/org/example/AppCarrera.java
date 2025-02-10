@@ -7,7 +7,7 @@ public class AppCarrera {
         Corredor corredor1 = new Corredor("Luis",1.5);
         System.out.println(corredor1);
         iesmutxamel.inscribir_corredor(corredor1);
-//        corredor1.insertarPatrocinador("Madre","Profe_mates","Profe_ingles");
+        corredor1.insertarPatrocinador("Madre","Profe_mates","Profe_ingles");
         corredor1.insertarPatrocinador("Profe_cast");
         System.out.println(corredor1);
         Corredor corredor2 = new Corredor("Carla",0.0);
